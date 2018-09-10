@@ -6,30 +6,38 @@
 # It must contain a prior function which takes a single input: a random
 # point in the N-hypercube. This prior function must return a parameter
 # list which has been scaled from the N-hypercube to the scanning parameter
-# priors. 
-#
-# Nuisance and constant parameters must be unpacked manually
+# priors.
 #
 # It is useful to include a model function which computes
 # A model parameter from the scanning parameters. This model function can be
 # called inside the loglikelihood function for the sake of readability.
-
+#
 # This is an example model file
+
+# --------------------------------------
+#   Things the user shouldn't change
+# --------------------------------------
 import prior_handler as phandle
 import numpy as np
 import os
 cwd = os.path.dirname(os.path.realpath(__file__))
-print(cwd)
+print(cwd) #for verbosity
 
 prior_handler = phandle.PriorHandler(cwd)
-con = prior_handler.c
+con = prior_handler.c #manually load constant parameters
 n_pars = prior_handler.n_pars
 
 def prior(cube, n_dims, n_pars):
     return prior_handler.scale(cube)
 
+# --------------------------------------
+#   Things the user should change
+# --------------------------------------
+
 def model_value(pars):
     # get the nuisances from the par-based seed
+    # note that this must be done on a per-parameter basis, and so cannot
+    # be loaded once at the start
     nui = prior_handler.get_nui(pars)
     
     # with pars, nui, con, start calculation:
