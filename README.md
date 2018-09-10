@@ -30,7 +30,7 @@ And run demo.py:
 ```
 python demo.py
 ```
-You should see a long list of values, and two lines at the end that reads:
+You should see a long list of values, and two lines at the end that read:
 ```
 Sampling finished. Exiting MultiNest
 <directory-to-PyMultiNestPlus>/PyMultiNestPlus/example_workspace/inverted_hierarchy_nui
@@ -53,7 +53,7 @@ scanning = [mass, phi1]
 nuisance = [phi2]
 constant = []
 ```
-Creates a uniformly distributed mass parameter between 1 and 10, a periodic phi1 parameter distributed between 0 and 2pi according to the file `phi1-data.txt` in `prior_data`, and a periodic phi2 parameter which follows a gaussian distribution of mean pi and standard deviation 0.1. It then loads mass and phi1 into the scanning parameters, and phi2 into the nuisance parameters.
+Creates a uniformly distributed mass parameter between 1 and 10, a periodic phi1 parameter distributed between 0 and 2pi according to the file `phi1-data.dat` in `prior_data`, and a periodic phi2 parameter which follows a gaussian distribution of mean pi and standard deviation 0.1. It then loads mass and phi1 into the scanning parameters, and phi2 into the nuisance parameters.
 
 The model file `model.py` contains two functions which can be edited by the user: `model_value` and `loglikelihood`. `model_value` should return an object `mval` which is then directly passed to `loglikelihood` which in turn should return a single value: the logarithm of the likelihood of `mval` when compared to the target distribution. Parameters are zero-indexed in the same order that they are loaded in `parameters.py`.
 
