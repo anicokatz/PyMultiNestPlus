@@ -44,7 +44,7 @@ A brief overview of the workspace structure is given below. More information can
 
 Each workspace consists of a single file which manages the program, and a single folder for each model that you want to simulate over. Each model contains a folder for the output data called `chains`, a folder for the non-standard (gaussian, uniform) prior data called `prior_data`, a parameters/priors file called `parameters.py`, and a model file called `model.py`.
 
-The program reads from `parameters.py` once at runtime, and loads from it all model parameters: scanning parameters which the simulation is run over, nuisance or noisy parameters, and constants. These parameters should include the parameters which define the posterior distribution. In the case that a non-standard parameter type is used, it will load sample data (a single string of space-separated values in a `.txt` file) of the same type from `prior_data` and generate a distribution from that. For example:
+The program reads from `parameters.py` once at runtime, and loads from it all model parameters: scanning parameters which the simulation is run over, nuisance or noisy parameters, and constants. These parameters should include the parameters which define the posterior distribution. In the case that a non-standard parameter type is used, it will load sample data (a single string of space-separated values in a `.dat` file) of the same type from `prior_data` and generate a distribution from that. For example:
 ```
 mass = ['mass', 'real', 1, 10, 'uniform']
 phi1 = ['phi1', 'periodic', 0, 2*np.pi, 'phi1-data']
