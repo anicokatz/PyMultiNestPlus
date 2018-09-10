@@ -63,6 +63,13 @@ The rest of `model.py` should not be edited, as it automatically handles prior s
 
 Each model can `run()`, `sanitise()`, and  `generate_samples_file()` by itself, for itself. However, a `simulation_handler` object will automatically deal with every loaded model. An example of how to do this is detailed in `demo.py`.
 
+### Output
+
+Model sample chains are outputted as `samples.dat` in the model's `chains` folder. It contains a sanitised and correctly scaled-from-unit-hypercube version of the data in `post_equal_weights.dat`, and should be immediately readable using standard library file reading functions.
+
+The final column in the file is the logarithm of the likelihood of the sample.
+
+The logarithm of the global model evidence can be found in `stats.dat`.
 
 ## Authors
 
