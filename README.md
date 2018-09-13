@@ -6,6 +6,7 @@ PyMultiNestPlus is a small library of python files that provides additional func
 - Additional data sanitisation.
 - Automatic generation and handling of non-standard prior distributions from a list of data points.
 - Automatic scaling from the unit hypercube to the prior space.
+
 In essence, PyMultiNestPlus streamlines a lot of the tedious or time-consuming and pedantic parts of using PyMultiNest, while keeping as much of the original flexibility as possible.
 
 ## Getting Started
