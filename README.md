@@ -26,7 +26,7 @@ To test PyMultiNestPlus, first navigate to the example workspace:
 ```
 cd <directory-to-PyMultiNestPlus>/PyMultiNestPlus/example_workspace
 ```
-And run demo.py:
+And run `generate_data_demo.py`:
 ```
 python demo.py
 ```
@@ -34,6 +34,14 @@ You should see a long list of values, and two lines at the end that read:
 ```
 Sampling finished. Exiting MultiNest
 <directory-to-PyMultiNestPlus>/PyMultiNestPlus/example_workspace/inverted_hierarchy_nui
+```
+Then run `analyse_data_demo.py`:
+```
+python analyse_data_demo.py
+```
+You should see a dictionary of important variables regarding `model_1`:
+```
+{'workspace_dir': '<directory-to-PyMultiNestPlus>/PyMultiNestPlus/example_workspace', 'model_name': 'model_1', 'par_names': ['radius', 'theta'], 'nui_names': ['phi'], 'con_names': ['mu', 'sd'], 'n_par': 2, 'n_nui': 1, 'n_con': 2, 'tolerance': 0.2, 'n_live': 300, 'resume': False, 'max_iterations': -1, 'n_samples': 697, 'logZ': nan}
 ```
 
 ## Tutorial
