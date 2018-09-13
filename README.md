@@ -50,6 +50,7 @@ You should see a dictionary of important variables regarding `model_1`:
 ```
 {'workspace_dir': '<directory-to-PyMultiNestPlus>/PyMultiNestPlus/example_workspace', 'model_name': 'model_1', 'par_names': ['radius', 'theta'], 'nui_names': ['phi'], 'con_names': ['mu', 'sd'], 'n_par': 2, 'n_nui': 1, 'n_con': 2, 'tolerance': 0.2, 'n_live': 300, 'resume': False, 'max_iterations': -1, 'n_samples': 697, 'logZ': nan}
 ```
+(Note that the value of `'n_samples'` may differ; but should land within the 500-1000 range. A value of zero, a value outside of this range, or a value of exactly 718 may indicate that PyMultiNestPlus/PyMultiNest/MultiNest is not working. Rerun the `generate_data_demo.py` file; and if the result doesn't change, do a clean reinstallation.
 
 ## Tutorial
 
