@@ -16,7 +16,6 @@ In essence, PyMultiNestPlus streamlines a lot of the tedious or time-consuming a
 PyMultiNestPlus requires a working python 3.6+ installation, MultiNest, and PyMultiNest to function properly. Instructions for the installation of both MultiNest and PyMultiNest are provided at https://johannesbuchner.github.io/PyMultiNest/install 
 
 ### Installing
-{'workspace_dir': '/home/ank/Desktop/PyMultiNestPlus/example_workspace', 'model_name': 'model_1', 'par_names': ['radius', 'theta'], 'nui_names': ['phi'], 'con_names': ['mu', 'sd'], 'n_par': 2, 'n_nui': 1, 'n_con': 2, 'tolerance': 0.2, 'n_live': 300, 'resume': False, 'max_iterations': -1, 'n_samples': 697, 'logZ': nan}
 
 PyMultiNestPlus doesn't need to be installed. The library and workspace can be cloned directly from github:
 ```
