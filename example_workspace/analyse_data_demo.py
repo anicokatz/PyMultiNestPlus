@@ -27,3 +27,4 @@ analyser.plot_contour_2par("normal_hierarchy", ["phi1", "phi2"])
 analyser.refresh()
 
 analyser.plot_contour_2par("inverted_hierarchy", ["phi1", "phi2"])
+analyser.refresh()
