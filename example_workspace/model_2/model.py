@@ -28,14 +28,14 @@ n_pars = prior_handler.n_pars
 def prior(cube, n_dims, n_pars):
     return prior_handler.scale(cube)
 
-def model_value(pars):
+def observables(pars):
     # get the nuisances from the par-based seed
     nui = prior_handler.get_nui(pars)
     
     # with pars, nui, con, start calculation:
-    return pars[0]*np.sin(pars[1])*np.cos(nui[0])
+    return [pars[0]*np.sin(pars[1])*np.cos(nui[0])]
 
 def loglikelihood(pars, n_dims, n_pars):
-    mval = model_value(pars)
-    loglikelihood = (-((mval-con[0])**2)/(2*(con[1]**2)))
+    obs = observables(pars)
+    loglikelihood = (-((obs[0]-con[0])**2)/(2*(con[1]**2)))
     return loglikelihood

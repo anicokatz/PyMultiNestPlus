@@ -8,19 +8,19 @@ import simulation_handler as shandle
 # for using old data (provided nothing has changed in that particular model's folder), set resume to true
 # setting max_iterations to anything but -1 will ensure a cut-off that may be useful for extremely low-likelihood models
 
-tol = 0.5
-n_live = 200
+tol = 0.4
+n_live = 300
 resume = False
 max_iter = -1
 
-model1 = ["model_1", 0.2, 300, False, -1]
-model2 = ["model_2", 0.4, 200, False, -1]
+model1 = ["model_1", 0.3, 200, False, -1]
+model2 = ["model_2", 0.4, 300, False, -1]
 modelNH = ["normal_hierarchy", tol, n_live, resume, max_iter]
 modelIH = ["inverted_hierarchy", tol, n_live, resume, max_iter]
 modelNH_nui = ["normal_hierarchy_nui", tol, n_live, resume, max_iter]
 modelIH_nui = ["inverted_hierarchy_nui", tol, n_live, resume, max_iter]
 
-model_list = [model1, model2]
+model_list = [model1, model2, modelNH, modelIH, modelNH_nui, modelIH_nui]
 
 # first we make a simulation handler to (surprise surprise) handle our simulation for us
 simulation_handler = shandle.SimulationHandler(model_list)
